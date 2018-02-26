@@ -12,7 +12,6 @@ class Box {
     function __construct($title_in, $text_in,$class_in) {
         $this->text = $text_in;
         $this->title  = $title_in;
-        // $this->class = $this->class_in;
     }
     function getText() {
         return $this->text;
@@ -29,9 +28,6 @@ class Box {
     }
     function getStyleEnd(){
         return $this->style_end;
-    }
-    function ShowBox(){
-        //TO DO
     }
 }
 
@@ -62,10 +58,6 @@ class BoxTitleDecorator {
     function setStyleEnd(){
         $this->style_end = $this->box->getStyleEnd();
     }
-    function showBox()
-    {
-        //TODO
-    } //TODO
 }
 
 
@@ -106,11 +98,19 @@ class BoxStyleDecorator extends BoxTitleDecorator {
     {
         $this->btd = $btd_in;
     }
-    function ChangeStyleProperties($borderColor ="white",$borderSize = 8,$class = "dw-pnl", $effect = 0){
+    function ChangeStyleProperties($borderColor ="white",$borderSize = 8,$class = "dw-pnl", $effect = 0)
+    {
         $this->style_start = "<div class='" . $class . "' style='border: solid " . $borderSize . "px " . $borderColor . ";border-radius:25px;'>";
         $this->style_end = "</div>";
-
     }
+    /*    if ($effect == 0 ){
+
+        }elseif ($effect == 1){
+
+        }elseif($effect == 2){
+
+        }
+    }*/ #TODO
     function GetTopStyle (){
         return $this->style_start;
     }
@@ -118,7 +118,6 @@ class BoxStyleDecorator extends BoxTitleDecorator {
         return $this->style_end;
     }
 }
-
 
 $patternBox = new Box('My first custom box', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ligula erat', "dw_pln");
 $decorator = new BoxTitleDecorator($patternBox);
