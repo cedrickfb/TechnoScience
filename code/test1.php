@@ -6,7 +6,7 @@ $coloredTitleDecorator->changeTitleColor("green",50);
 $changedTextDecorator = new BoxContentDecorator($decorator);
 $changedTextDecorator->changeTextProperties("red",40);
 $boxStyleChanged = new BoxStyleDecorator($decorator);
-$boxStyleChanged->ChangeStyleProperties("white",8,"dw-pln dw-pnl--fcs");
+$boxStyleChanged->ChangeStyleProperties("white",8,"dw-pnl dw-pnl--fcs");
 echo $boxStyleChanged->GetTopStyle();
 echo $coloredTitleDecorator->getTitle();
 echo $changedTextDecorator->getText();
