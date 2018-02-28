@@ -1,4 +1,0 @@
-<?php
-$book = new Book('PHP for Cats','Larry Truett');
-$exclaimTemplate = new TemplateExclaim();
-$starsTemplate = new TemplateStars();

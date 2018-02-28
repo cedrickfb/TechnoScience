@@ -133,11 +133,20 @@ echo $boxStyleChanged->GetTopStyle();
 echo $coloredTitleDecorator->getTitle();
 echo $changedTextDecorator->getText();
 echo $boxStyleChanged->GetEndStyle();
-include "code/test1.php";
+
+foreach(glob('C:/wamp64/www/TechnoScience/code/*.php') as $file) {
+    if ($file !== '.' and $file !== '..') {
+        require($file);
+    }
+}
+
+//include "code/test1.php";
 
 function writeln($line_in) {
     echo $line_in."<br/>";
 }
+
+
 
 ?>
 
